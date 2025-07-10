@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import Logo from "./Logo"; // Importa o componente de logo hightech
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -29,14 +30,16 @@ export default function Navbar() {
     )}
     <header className="bg-zinc-950 shadow-md fixed w-full z-50 top-0 left-0">
     <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 text-white font-poppins">
-    {/* PREP: Aqui será alterado para o novo domínio futuramente */}
-    <Link
-    to="/"
-    className="text-2xl font-bold tracking-wide text-yellow-400 hover:underline font-poppins uppercase"
-    title="URBZToken Home"
-    >
-    URBZToken
-    </Link>
+    {/* Logo hightech */}
+    <Logo
+    onClick={() => {
+      if (window.location.pathname === "/") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        window.location.href = "/";
+      }
+    }}
+    />
     <ul className="hidden lg:flex gap-8 text-sm font-medium">
     <li>
     <button className="hover:text-yellow-400" onClick={() => scrollToId("hero")}>
@@ -86,7 +89,17 @@ export default function Navbar() {
     } lg:hidden`}
     >
     <div className="flex items-center justify-between px-4 py-4 border-b border-zinc-700">
-    <span className="text-xl font-bold text-yellow-400">URBZToken</span>
+    {/* Logo no menu mobile (pode ser só texto ou usar <Logo /> também) */}
+    <Logo
+    onClick={() => {
+      setOpen(false);
+      if (window.location.pathname === "/") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      } else {
+        window.location.href = "/";
+      }
+    }}
+    />
     <button onClick={() => setOpen(false)} className="p-2 rounded hover:bg-zinc-800">
     <span className="block w-6 h-0.5 mb-1 bg-yellow-400"></span>
     <span className="block w-6 h-0.5 bg-yellow-400"></span>
