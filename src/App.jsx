@@ -5,6 +5,7 @@ import PropertiesGallery from "./components/PropertiesGallery";
 import FAQ from "./components/FAQ";
 import CallToAction from "./components/CallToAction";
 import FooterInfo from "./components/FooterInfo";
+import perdizesBg from './assets/perdizes.jpg'; // ajuste o path se estiver em outro diretório
 
 export default function App() {
   return (
@@ -13,7 +14,7 @@ export default function App() {
     <div
     className="fixed inset-0 -z-10 w-full h-full bg-cover bg-center bg-no-repeat"
     style={{
-      backgroundImage: "url('/imagens/perdizes.jpg')",
+      backgroundImage: "url('./assets/perdizes.jpg')",
           backgroundAttachment: "fixed",
     }}
     />
