@@ -3,6 +3,11 @@
     { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
   ],
   "redirects": [
-    { "source": "/", "destination": "/whitepaper.pdf", "permanent": true }
+    {
+      "source": "/",
+      "destination": "/whitepaper.pdf",
+      "has": [{ "type": "host", "value": "whitepaper.urbztoken.com" }],
+      "permanent": true
+    }
   ]
 }
