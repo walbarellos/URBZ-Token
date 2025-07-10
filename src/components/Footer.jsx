@@ -8,7 +8,6 @@ export default function Footer() {
         URBZToken © 2025 &middot; <a href="https://urbz-token.vercel.app/whitepaper.pdf" className="text-yellow-400 hover:underline">Whitepaper</a>
       </div>
       <div className="mt-2 text-xs">
-        Termos &middot; Política de Privacidade &middot; contato@urbztoken.com
       </div>
     </footer>
   );
