@@ -1,10 +1,7 @@
 {
   "builds": [
     { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
-  ]
-}
-
-{
+  ],
   "redirects": [
     { "source": "/", "destination": "/whitepaper.pdf", "permanent": true }
   ]
