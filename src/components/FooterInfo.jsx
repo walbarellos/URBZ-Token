@@ -8,7 +8,6 @@ export default function FooterInfo() {
           href="mailto:contato@urbztoken.com"
           className="text-yellow-400 hover:underline"
         >
-          contato@urbztoken.com
         </a>
       </span>
     </div>
