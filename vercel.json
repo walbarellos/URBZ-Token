@@ -6,7 +6,7 @@
     {
       "source": "/",
       "destination": "/whitepaper.pdf",
-      "has": [{ "type": "host", "value": "https://urbz-token.vercel.app/" }],
+      "has": [{ "type": "host", "value": "https://urbz-token.vercel.app" }],
       "permanent": true
     }
   ]
