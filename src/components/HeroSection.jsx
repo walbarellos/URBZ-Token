@@ -14,7 +14,7 @@ export default function HeroSection() {
           <br /> Democratize o acesso ao investimento imobiliário com inovação.
         </p>
         <a
-          href="https://whitepaper.urbztoken.com"
+          href="https://urbz-token.vercel.app/whitepaper.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="bg-yellow-400 hover:bg-yellow-300 text-zinc-900 px-8 py-3 rounded-xl font-semibold transition"
