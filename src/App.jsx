@@ -5,7 +5,8 @@ import PropertiesGallery from "./components/PropertiesGallery";
 import FAQ from "./components/FAQ";
 import CallToAction from "./components/CallToAction";
 import FooterInfo from "./components/FooterInfo";
-import perdizesBg from './assets/perdizes.jpg'; // ajuste o path se estiver em outro diretório
+import perdizesBg from './assets/perdizes.jpg'; // importando a imagem
+import ScrollToTopButton from "./components/ScrollToTopButton";
 
 export default function App() {
   return (
@@ -14,7 +15,7 @@ export default function App() {
     <div
     className="fixed inset-0 -z-10 w-full h-full bg-cover bg-center bg-no-repeat"
     style={{
-      backgroundImage: "url('./assets/perdizes.jpg')",
+      backgroundImage: `url(${perdizesBg})`,
           backgroundAttachment: "fixed",
     }}
     />
@@ -28,6 +29,7 @@ export default function App() {
     <footer className="py-6 bg-zinc-950 text-center">
     <FooterInfo />
     </footer>
+    <ScrollToTopButton />
     </div>
   );
 }
