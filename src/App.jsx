@@ -8,19 +8,17 @@ import FooterInfo from "./components/FooterInfo";
 
 export default function App() {
   return (
+    <div className="relative min-h-screen">
+    {/* BG fixo com imagem perdizes.jpg */}
     <div
+    className="fixed inset-0 -z-10 w-full h-full bg-cover bg-center bg-no-repeat"
     style={{
       backgroundImage: "url('/imagens/perdizes.jpg')",
-          backgroundSize: "cover",
           backgroundAttachment: "fixed",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center center",
-          minHeight: "100vh"
     }}
-    className="bg-zinc-900"
-    >
+    />
     <Navbar />
-    <main className="backdrop-blur-[2px] bg-zinc-900/80 min-h-screen">
+    <main className="min-h-screen bg-zinc-900/85 backdrop-blur-md">
     <section id="hero"><Highlights /></section>
     <section id="como-funciona"><PropertiesGallery /></section>
     <section id="imoveis"><FAQ /></section>
@@ -32,5 +30,3 @@ export default function App() {
     </div>
   );
 }
-
-// PREP: Para domínio URBZ.tec.br, basta atualizar as referências e config Vercel.
