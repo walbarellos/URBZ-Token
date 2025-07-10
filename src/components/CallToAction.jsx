@@ -26,7 +26,7 @@ export default function CallToAction() {
           Quero receber
         </button>
       </form>
-      <FooterInfo />
+
     </section>
   );
 }
