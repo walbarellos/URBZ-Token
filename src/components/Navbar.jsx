@@ -14,15 +14,14 @@ export default function Navbar() {
       )}
       <header className="bg-zinc-950 shadow-md fixed w-full z-50 top-0 left-0">
         <nav className="max-w-7xl mx-auto flex items-center justify-between px-4 py-4 text-white font-poppins">
-          <a
-            href="/whitepaper.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-2xl font-bold tracking-wide text-yellow-400 hover:underline font-poppins uppercase"
-            title="Acesse o Whitepaper"
-          >
-            URBZToken
-          </a>
+        <Link
+        to="/"
+        className="text-2xl font-bold tracking-wide text-yellow-400 hover:underline font-poppins uppercase"
+        title="URBZToken Home"
+        >
+        URBZToken
+        </Link>
+
           <ul className="hidden lg:flex gap-8 text-sm font-medium">
             <li><Link to="/" className="hover:text-yellow-400">Home</Link></li>
             <li><a href="#como-funciona" className="hover:text-yellow-400">Como Funciona</a></li>
