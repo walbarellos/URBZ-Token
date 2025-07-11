@@ -15,9 +15,11 @@ export default function App() {
     <div
     className="fixed inset-0 -z-10 w-full h-full bg-cover bg-center bg-no-repeat"
     style={{
-      backgroundImage: `url(${perdizesBg})`,
-          backgroundAttachment: "fixed",
+      backgroundImage: `url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80')`,
+      backgroundAttachment: "fixed",
     }}
+
+
     />
     <Navbar />
     <main className="min-h-screen bg-zinc-900/85 backdrop-blur-md">

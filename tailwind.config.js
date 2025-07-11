@@ -3,6 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
     extend: {
+      fontFamily: {
+      orbitron: ['Orbitron', 'sans-serif'],
+      },
       colors: {
         primary: "#facc15",
         purple: "#871cde",
