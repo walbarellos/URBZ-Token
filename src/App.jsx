@@ -5,23 +5,23 @@ import PropertiesGallery from "./components/PropertiesGallery";
 import FAQ from "./components/FAQ";
 import CallToAction from "./components/CallToAction";
 import FooterInfo from "./components/FooterInfo";
-import perdizesBg from './assets/perdizes.jpg'; // importando a imagem
 import ScrollToTopButton from "./components/ScrollToTopButton";
+import BannerPerdizes from "./components/BannerPerdizes"; // Certifique-se de criar este componente!
 
 export default function App() {
   return (
     <div className="relative min-h-screen">
-    {/* BG fixo com imagem perdizes.jpg */}
+    {/* BG fixo global (se quiser manter!) */}
     <div
     className="fixed inset-0 -z-10 w-full h-full bg-cover bg-center bg-no-repeat"
     style={{
-      backgroundImage: `url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80')`,
-      backgroundAttachment: "fixed",
+      backgroundImage: `url('/imagens/perdizes.jpg')`, // Ou troque pelo global desejado
+          backgroundAttachment: "fixed",
     }}
-
-
     />
     <Navbar />
+    {/* Banner institucional Perdizes (DEPOIS da navbar, ANTES do conteúdo) */}
+    <BannerPerdizes />
     <main className="min-h-screen bg-zinc-900/85 backdrop-blur-md">
     <section id="hero"><Highlights /></section>
     <section id="como-funciona"><PropertiesGallery /></section>
