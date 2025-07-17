@@ -3,7 +3,7 @@
 📄 README.md
 ```
 
-Eeddsse é o documento oficial que representa o projeto **URBZToken** no GitHub ou repositórios equivalentes. O conteúdo está orientado a:
+Esse é o documento oficial que representa o projeto **URBZToken** no GitHub ou repositórios equivalentes. O conteúdo está orientado a:
 
 * Desenvolvedores técnicos
 * Investidores e mantenedores
