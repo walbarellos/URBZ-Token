@@ -112,12 +112,7 @@ export default function Navbar() {
     </button>
     </li>
     <li>
-    <button className="hover:text-yellow-400" onClick={() => scrollToId("imoveis")}>
-    Imóveis
-    </button>
-    </li>
-    <li>
-    <button className="hover:text-yellow-400" onClick={() => scrollToId("faq")}>
+    <button  className="hover:text-yellow-400" onClick={() => scrollToId("faq")}>
     FAQ
     </button>
     </li>
