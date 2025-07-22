@@ -1,24 +1,20 @@
 import React from "react";
-import perdizesJPG from "../assets/perdizes.jpg"; // ou .png
 
 export default function BannerPerdizes() {
   return (
-    <div
-    className="
-    w-full
-    h-32 md:h-48
-    bg-center bg-cover
-    rounded-none
-    overflow-hidden
-    shadow-md
-    flex
-    items-center
-    justify-center
-    "
-    style={{
-      backgroundImage: `url(${perdizesJPG})`,
-    }}
-    aria-label="Banner Perdizes"
-    />
+    <section
+      className="w-full h-[600px] md:h-[700px] lg:h-[800px] relative"
+      style={{
+        backgroundImage: "url('/imagens/perdizes.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+      }}
+    >
+      <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+        <h2 className="text-white text-3xl md:text-5xl font-bold text-center px-4">
+          URBZToken transforma imóveis reais em ativos digitais acessíveis
+        </h2>
+      </div>
+    </section>
   );
 }
