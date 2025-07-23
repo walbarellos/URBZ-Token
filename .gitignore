@@ -1,0 +1,9 @@
+# Evita subir dados sensíveis
+.env
+*.env
+*.key
+*.pem
+*.crt
+node_modules/
+dist/
+
