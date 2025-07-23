@@ -14,7 +14,7 @@ export default function App() {
       <div
         className="fixed inset-0 -z-10 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: `url('/imagens/perdizes.jpg')`,
+          backgroundImage: `url('/assets/perdizes.jpg')`,
           backgroundAttachment: "fixed",
         }}
       />
