@@ -1,18 +1,29 @@
-
 import React from "react";
 
 export default function InvestorsPage() {
   return (
-    <section className="max-w-3xl mx-auto py-20 px-6 text-center">
-      <h1 className="text-3xl font-bold mb-4">Investidores URBZToken</h1>
-      <p className="text-lg text-gray-300 mb-6">
-        Transparência, rentabilidade e segurança para quem quer investir no futuro do mercado imobiliário digital.
-      </p>
-      <ul className="space-y-3 text-gray-300">
-        <li><strong>Diversificação:</strong> Amplie seu portfólio com ativos reais tokenizados.</li>
-        <li><strong>Governança transparente:</strong> Todo investimento registrado em blockchain.</li>
-        <li><strong>Baixo valor de entrada:</strong> Invista de forma acessível e inovadora.</li>
-      </ul>
+    <section className="max-w-4xl mx-auto px-6 py-24 text-center text-zinc-200 font-[Orbitron]">
+
+    <h1 className="text-4xl md:text-5xl font-bold text-yellow-400 mb-6 drop-shadow-sm">
+    Investidores URBZToken
+    </h1>
+
+    <p className="text-lg md:text-xl text-zinc-300 leading-relaxed mb-10">
+    Transparência, rentabilidade e segurança para quem acredita no futuro do <span className="text-yellow-300 font-semibold">mercado imobiliário digital</span>.
+    </p>
+
+    <ul className="space-y-6 text-left text-zinc-300 text-base md:text-lg leading-relaxed">
+    <li>
+    <span className="text-yellow-400 font-semibold">✔ Diversificação:</span> Amplie seu portfólio com <strong className="text-white">ativos reais tokenizados</strong>.
+    </li>
+    <li>
+    <span className="text-yellow-400 font-semibold">✔ Governança transparente:</span> Todo investimento registrado de forma <strong className="text-white">imutável via blockchain</strong>.
+    </li>
+    <li>
+    <span className="text-yellow-400 font-semibold">✔ Baixo valor de entrada:</span> Invista com acessibilidade e inovação — <strong className="text-white">a partir de frações</strong>.
+    </li>
+    </ul>
+
     </section>
   );
 }

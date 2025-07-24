@@ -28,10 +28,10 @@ export default async function sendEmail(req, res) {
                                                        },
         });
 
-        // Caminho da imagem
+        // Caminho para o banner (se quiser adicionar futuramente)
         const bannerPath = path.join(__dirname, "assets", "PerdizesToken.png");
 
-        // 📩 1. E-mail para admin (você)
+        // 📨 Enviar email ao administrador
         await transporter.sendMail({
             from: process.env.MAIL_FROM,
             to: process.env.MAIL_USER,
@@ -39,40 +39,13 @@ export default async function sendEmail(req, res) {
             html: `<p>Novo e-mail cadastrado: <strong>${email}</strong></p>`,
         });
 
-        // 📩 2. E-mail para o usuário
-        const htmlUser = `
-        <div style="font-family: 'Segoe UI', Roboto, sans-serif; background-color: #0f0f0f; color: #ffffff; padding: 30px; border-radius: 8px; max-width: 600px; margin: auto;">
-        <div style="text-align: center;">
-        <img src="cid:bannerimage" alt="URBZToken" style="width: 100%; max-width: 500px; border-radius: 10px; margin-bottom: 30px;" />
-        </div>
+        // 📨 Lê o HTML refinado do template
+        const htmlUser = fs.readFileSync(
+            path.join(__dirname, "emails", "welcome.html"),
+                                         "utf8"
+        );
 
-        <h2 style="color: #facc15; text-align: center;">Bem-vindo à URBZToken</h2>
-
-        <p style="font-size: 16px; line-height: 1.6; margin-top: 20px;">
-        Prezado(a) investidor(a),
-        </p>
-
-        <p style="font-size: 16px; line-height: 1.6;">
-        Agradecemos por se cadastrar em nossa plataforma. A partir de agora, você fará parte da nossa comunidade exclusiva de investidores que acreditam na transformação do mercado imobiliário através da <strong>tokenização segura e fracionada de imóveis reais</strong>.
-        </p>
-
-        <p style="font-size: 16px; line-height: 1.6;">
-        Em breve, você receberá atualizações sobre novas oportunidades, pré-vendas, lançamentos e eventos.
-        </p>
-
-        <div style="text-align: center; margin: 30px 0;">
-        <a href="https://urbztoken.com" target="_blank" style="background-color: #facc15; color: #000; padding: 12px 24px; text-decoration: none; border-radius: 5px; font-weight: bold;">
-        Acessar Plataforma
-        </a>
-        </div>
-
-        <p style="font-size: 14px; color: #cccccc; text-align: center; margin-top: 40px;">
-        URBZToken | Transformando imóveis em ativos digitais
-        </p>
-        </div>
-        `;
-
-
+        // 📨 Envia para o usuário
         await transporter.sendMail({
             from: process.env.MAIL_FROM,
             to: email,
@@ -82,14 +55,14 @@ export default async function sendEmail(req, res) {
                 {
                     filename: "PerdizesToken.png",
                     path: bannerPath,
-                    cid: "bannerimage", // Referência usada no src="cid:bannerimage"
+                    cid: "bannerimage",
                 },
             ],
         });
 
         return res.status(200).json({ message: "E-mails enviados com sucesso" });
     } catch (err) {
-        console.error("Erro no envio:", err);
-        return res.status(500).json({ message: "Erro ao enviar o e-mail" });
+        console.error("Erro ao enviar e-mail:", err);
+        return res.status(500).json({ message: "Erro ao enviar e-mail" });
     }
 }

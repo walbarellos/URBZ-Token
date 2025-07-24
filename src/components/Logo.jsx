@@ -4,19 +4,11 @@ export default function Logo({ onClick }) {
   return (
     <button
     onClick={onClick}
-    style={{
-      fontFamily: 'Orbitron, sans-serif',
-      letterSpacing: '0.15em',
-      color: '#facc15',
-      fontWeight: '900',
-      fontSize: 32,
-      background: 'none',
-      border: 'none',
-      cursor: 'pointer',
-    }}
     aria-label="Voltar para o início"
+    className="text-2xl md:text-3xl font-extrabold tracking-widest font-[Orbitron] text-yellow-400 hover:opacity-90 transition duration-300"
+    style={{ background: "none", border: "none" }}
     >
-    URBZ<span style={{ color: '#f4f4f5' }}>TOKEN</span>
+    URBZ<span className="text-zinc-100">TOKEN</span>
     </button>
   );
 }
