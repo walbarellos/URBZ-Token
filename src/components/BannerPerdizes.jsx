@@ -28,7 +28,7 @@ export default function BannerPerdizes() {
     </div>
 
     {/* Título acessível para leitores de tela */}
-    <h1 className="sr-only">URBX: Transparência Jurídica e Governança</h1>
+    <h1 className="sr-only">URBZ: Transparência Jurídica e Governança</h1>
     </section>
   );
 }
